@@ -34,4 +34,4 @@ if (eta < 18) {
 }
 
 //output
-document.getElementById("costo").innerHTML = "Ecco il tuo biglietto: " +costo;
+document.getElementById("costo").innerHTML = "Ecco il tuo biglietto: " + costo;
