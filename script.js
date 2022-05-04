@@ -34,3 +34,6 @@ if (eta < 18) {
     console.log("Ecco il costo del biglietto: " + costo + "€");
 }
 
+//output
+document.getElementById("costo").innerHTML = "Ecco il tuo biglietto: " +costo;
+document.getElementById("costo").innerHTML = "Ecco il tuo biglietto: " +costo_scontato;
