@@ -7,10 +7,9 @@ L’output del prezzo finale va messo fuori in forma umana (con massimo due deci
 
 let costo;
 let costo_scontato;
-let costo_non_scontato;
 
 //chiede il numero di chilometri
-const lunghezza = prompt("Chilometri che servono per arrivare");
+const lunghezza =parseInt(prompt("Chilometri che servono per arrivare"));
 console.log(lunghezza);
 
 //chiede l' età del ragazzo
@@ -19,19 +18,19 @@ console.log(eta);
 
 if (eta < 18) {
     //costo scontato ragazzi
-    costo = ((lunghezza * 0.21) * 0.20);
+    costo = ((lunghezza * 0.21) * (80 / 100));
     costo_scontato = costo.toFixed(2);
     console.log("Ecco il costo del biglietto: " + costo_scontato + "€");
 
 } else if (eta > 65){
     //costo scontato adulti
-    costo = ((lunghezza * 0.21) * 0.40);
+    costo = ((lunghezza * 0.21) * (60 / 100));
     costo_scontato = costo.toFixed(2);
     console.log("Ecco il costo del biglietto: " + costo_scontato + "€");
 }else{
     //costo per i maggiorenni e gli adulti di età inferiore a 65
     costo = (lunghezza * 0.21);
-    costo_non_scontato = costo.toFixed(2);
-    console.log("Ecco il costo del biglietto: " + costo_non_scontato + "€");
+    costo = costo.toFixed(2);
+    console.log("Ecco il costo del biglietto: " + costo + "€");
 }
 
