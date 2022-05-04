@@ -6,7 +6,6 @@ va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). */
 
 let costo;
-let costo_scontato;
 
 //chiede il numero di chilometri
 const lunghezza =parseInt(prompt("Chilometri che servono per arrivare"));
@@ -19,14 +18,14 @@ console.log(eta);
 if (eta < 18) {
     //costo scontato ragazzi
     costo = ((lunghezza * 0.21) * (80 / 100));
-    costo_scontato = costo.toFixed(2);
-    console.log("Ecco il costo del biglietto: " + costo_scontato + "€");
+    costo = costo.toFixed(2);
+    console.log("Ecco il costo del biglietto: " + costo + "€");
 
 } else if (eta > 65){
     //costo scontato adulti
     costo = ((lunghezza * 0.21) * (60 / 100));
-    costo_scontato = costo.toFixed(2);
-    console.log("Ecco il costo del biglietto: " + costo_scontato + "€");
+    costo= costo.toFixed(2);
+    console.log("Ecco il costo del biglietto: " + costo + "€");
 }else{
     //costo per i maggiorenni e gli adulti di età inferiore a 65
     costo = (lunghezza * 0.21);
@@ -36,4 +35,3 @@ if (eta < 18) {
 
 //output
 document.getElementById("costo").innerHTML = "Ecco il tuo biglietto: " +costo;
-document.getElementById("costo").innerHTML = "Ecco il tuo biglietto: " +costo_scontato;
